@@ -1,0 +1,37 @@
+.page-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.page-header p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 1.25rem 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .page-header p {
+    font-size: 0.9rem;
+  }
+}
+
