@@ -20,6 +20,7 @@ export class ChatbotService {
     });
     console.log(process.env.OPENAI_BASE_URL);
     console.log(process.env.OPENAI_API_KEY);
+    console.log(process.env.MODEL);
   }
 
   async processMessage(createMessageDto: CreateMessageDto) {
@@ -45,7 +46,7 @@ export class ChatbotService {
     try {
       // Call OpenAI API
       const completion = await this.openai.chat.completions.create({
-        model: "ep-20250213172427-xhqn2",
+        model: process.env.MODEL,
         messages: [
           {
             role: "system",
@@ -156,7 +157,7 @@ export class ChatbotService {
 
       // Call OpenAI API with streaming
       const stream = await this.openai.chat.completions.create({
-        model: "ep-20250213172427-xhqn2",
+        model: process.env.MODEL,
         messages: [
           {
             role: "system",
