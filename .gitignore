@@ -1,0 +1,224 @@
+# ============================================
+# AI Chatbot Project - Root .gitignore
+# ============================================
+
+# ========== Dependencies ==========
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ========== Environment Variables ==========
+# IMPORTANT: Never commit these files!
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.*.local
+
+# ========== Build Outputs ==========
+# Backend (NestJS)
+backend/dist/
+backend/build/
+backend/*.tsbuildinfo
+
+# Frontend (Vite)
+frontend/dist/
+frontend/dist-ssr/
+frontend/build/
+
+# Frontend-Next.js
+frontend-nextjs/.next/
+frontend-nextjs/out/
+frontend-nextjs/build/
+frontend-nextjs/*.tsbuildinfo
+frontend-nextjs/next-env.d.ts
+
+# ========== Logs ==========
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ========== Testing ==========
+coverage/
+.nyc_output/
+*.lcov
+.jest/
+junit.xml
+
+# ========== IDE / Editor ==========
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ / WebStorm
+.idea/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ========== OS Files ==========
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ========== Database ==========
+# MongoDB
+*.mdb
+*.ldb
+mongodb-data/
+mongo-data/
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Database dumps
+*.sql
+*.dump
+
+# ========== Temporary Files ==========
+.temp/
+.tmp/
+.cache/
+*.tmp
+*.temp
+
+# ========== Production Files ==========
+*.tgz
+*.tar.gz
+*.zip
+*.rar
+
+# ========== Vercel ==========
+.vercel
+
+# ========== Docker ==========
+docker-compose.override.yml
+.dockerignore
+
+# ========== Security ==========
+# SSL Certificates
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+
+# Secrets
+secrets/
+*.secret
+
+# ========== Misc ==========
+.next-env.d.ts
+.turbo
+.vercel
+.netlify
+.firebase
+
+# Local development
+local/
+.local/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# ========== Keep These Files ==========
+# We want to keep example env files
+!.env.example
+!.env.sample
+
+# ========== Project Specific ==========
+# Next.js specific
+frontend-nextjs/.next/
+frontend-nextjs/out/
+
+# Build artifacts
+dist/
+build/
+out/
+
+# TypeScript
+*.tsbuildinfo
+
+# ESLint cache
+.eslintcache
+
+# Prettier cache
+.prettiercache
+
+# ========== Documentation (Keep) ==========
+# We want to keep documentation files
+!README.md
+!*.md
+
+# ========== Configuration (Keep if needed) ==========
+# Uncomment these if you want to commit config files
+# !tsconfig.json
+# !package.json
+# !next.config.js
+# !vite.config.ts

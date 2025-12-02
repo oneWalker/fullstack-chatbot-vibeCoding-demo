@@ -1,0 +1,76 @@
+.chatbot-page {
+  display: flex;
+  height: calc(100vh - var(--header-height, 100px));
+  overflow: hidden;
+}
+
+/* 如果 Header 在页面外层，动态计算剩余高度 */
+@supports (height: 100dvh) {
+  .chatbot-page {
+    height: calc(100dvh - var(--header-height, 100px));
+  }
+}
+
+.chatbot-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+/* Desktop: add left margin for sidebar */
+@media (min-width: 769px) {
+  .chatbot-main {
+    margin-left: 320px;
+  }
+}
+
+/* Header 样式已移至 Header.css */
+
+.page-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 12px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .chatbot-page {
+    height: calc(100vh - 85px); /* 移动端 header 高度较小 */
+  }
+
+  .page-content {
+    padding: 12px;
+  }
+
+  .page-footer {
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  .page-footer {
+    color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.03);
+  }
+}
+
