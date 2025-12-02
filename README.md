@@ -1,6 +1,10 @@
 # AI Chatbot Application
 
-A full-stack chatbot application with AI capabilities powered by OpenAI, featuring a NestJS backend and React frontend.
+A full-stack chatbot application with AI capabilities powered by OpenAI. This project offers multiple implementation options to suit different needs:
+
+- **NestJS + React (Vite)** - The original implementation
+- **FastAPI + React (Vite)** - Python backend alternative
+- **NestJS + Next.js** - Enhanced frontend with SSR capabilities
 
 ## 🚀 Quick Start
 
@@ -11,6 +15,8 @@ A full-stack chatbot application with AI capabilities powered by OpenAI, featuri
 - OpenAI API Key
 
 ### Setup Steps
+
+This project offers multiple tech stack options. Follow the instructions for your preferred combination:
 
 1. **Install Backend Dependencies**
 
@@ -72,6 +78,11 @@ Navigate to `http://localhost:5173` in your browser
 
 For detailed setup instructions, see [SETUP.md](./SETUP.md)
 
+### Sub-project Documentation
+
+- [FastAPI Backend README](./backend-fastapi/README.md)
+- [Next.js Frontend README](./frontend-nextjs/README.md)
+
 ## 🏗️ Project Structure
 
 ```
@@ -82,12 +93,27 @@ interviewProjects/
 │   │   ├── main.ts      # Entry point
 │   │   └── app.module.ts
 │   └── package.json
-├── frontend/             # React frontend
+├── backend-fastapi/      # FastAPI backend (Python)
+│   ├── app/
+│   │   ├── main.py       # Application entry point
+│   │   ├── chatbot/      # Chatbot module
+│   │   ├── database/     # Database connection
+│   │   ├── models/       # Database models
+│   │   ├── schemas/      # Pydantic schemas
+│   │   └── utils/        # Utility functions
+│   ├── requirements.txt  # Python dependencies
+│   └── README.md         # FastAPI backend documentation
+├── frontend/             # React frontend (Vite)
 │   ├── src/
 │   │   ├── components/  # UI components
 │   │   ├── pages/       # Page components
 │   │   └── App.tsx
 │   └── package.json
+├── frontend-nextjs/      # Next.js frontend
+│   ├── app/              # Next.js App Router
+│   ├── components/       # React components
+│   ├── next.config.js    # Next.js configuration
+│   └── README.md         # Next.js frontend documentation
 ├── database/
 │   └── mongodb-setup.md # MongoDB setup guide
 ├── SETUP.md             # Detailed setup guide
@@ -102,13 +128,15 @@ interviewProjects/
 - 🎨 Modern, responsive UI with animations
 - 🌙 Dark/Light mode support
 - 🔒 Type-safe with TypeScript
-- ⚡ Fast development with Vite
-- 🏗️ Scalable NestJS architecture
+- ⚡ Fast development with multiple frameworks (Vite, Next.js)
+- 🏗️ Scalable architecture with multiple backend options (NestJS, FastAPI)
 - 📊 Flexible NoSQL document storage
 
 ## 🛠️ Technology Stack
 
-### Backend
+### Backend Options
+
+#### NestJS (Node.js)
 
 - **NestJS** - Progressive Node.js framework
 - **TypeScript** - Type-safe JavaScript
@@ -116,13 +144,31 @@ interviewProjects/
 - **MongoDB** - NoSQL document database
 - **OpenAI API** - AI capabilities
 
-### Frontend
+#### FastAPI (Python)
+
+- **FastAPI** - High-performance Python web framework
+- **Python 3.8+** - Modern Python runtime
+- **Motor** - Asynchronous MongoDB driver
+- **Pydantic v2** - Data validation using Python type hints
+- **Uvicorn** - Lightning-fast ASGI server
+
+### Frontend Options
+
+#### React + Vite (SPA)
 
 - **React 18** - UI library
 - **TypeScript** - Type-safe JavaScript
 - **Vite** - Build tool
 - **Axios** - HTTP client
 - **CSS3** - Modern styling
+
+#### Next.js (SSR)
+
+- **Next.js 14** - The React Framework for the Web
+- **App Router** - File-system based routing
+- **Server Components** - Improved performance and bundle size
+- **SSR** - Server-Side Rendering for better SEO
+- **Hybrid Rendering** - Mix of static and dynamic content
 
 ## 📡 API Endpoints
 
